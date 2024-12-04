@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カスタムクラスでの修正確認</title>
+    <script src="BROOMHUBS_DEV-1329.js"></script>
+    <style>
+        .custom-dialog {
+            background-color: #f4f4f4;
+            padding: 300px;
+            border-radius: 15px;
+                 position: relative;
+                box-sizing: border-box;
+       }
+        .custom-content {
+            font-size: 30px;
+        }
+        .custom-button {
+            background-color: green;
+            color: white;
+        }
+    </style></head>
+<body>
+    <script>
+        BrhModal.setCustomClassNames({
+            dialog: "custom-dialog",
+            content: "custom-content",
+            button: "custom-button",
+        });
+    </script>
+    <button onclick="BrhModal.showModalDialog('デザインを指定したモーダルを表示')">デザインを指定してモーダルを表示</button>
+</body>
+</html>
